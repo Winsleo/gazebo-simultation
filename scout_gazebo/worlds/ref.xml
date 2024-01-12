@@ -1,0 +1,5273 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>2835 345000000</sim_time>
+      <real_time>1929 193943871</real_time>
+      <wall_time>1681814887 876882812</wall_time>
+      <iterations>1920760</iterations>
+      <model name='House 1'>
+        <pose>7.36698 -34.414 2.50414 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>7.36698 -34.414 2.50414 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 1_0'>
+        <pose>33.8454 22.9757 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>33.8454 22.9757 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 2'>
+        <pose>-31.605 20.6252 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-31.605 20.6252 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 2_0'>
+        <pose>-25.3939 -42.4658 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-25.3939 -42.4658 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 2_clone'>
+        <pose>-41.0753 1.46043 0 0 -0 1.58288</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-41.0753 1.46043 0 0 -0 1.58288</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 2_clone_clone'>
+        <pose>37.0063 3.37081 0 0 -0 1.58288</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>37.0063 3.37081 0 0 -0 1.58288</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Untitled'>
+        <pose>7e-06 5 -3.9392e+07 0 0.00079 1.57</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>7e-06 5 -3.9392e+07 1.57079 1e-06 3.14</pose>
+          <velocity>0 0 -27786.4 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ambulance'>
+        <pose>35.2645 -27.4498 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>35.2645 -27.4498 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ambulance_0'>
+        <pose>35.0545 -9.89908 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>35.0545 -9.89908 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='dragon'>
+        <pose>-20.9358 -17.7921 3.95507 1.58387 0 -0.042656</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-20.9358 -17.7921 3.95507 1.58387 0 -0.042656</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='dragon_clone'>
+        <pose>15.9056 -13.6024 3.95507 1.58387 0 -0.042656</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>15.9056 -13.6024 3.95507 1.58387 0 -0.042656</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='irobot_hand'>
+        <pose>-42.6563 -26.6076 -0.007523 -5.3e-05 -7e-06 2.64569</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>-42.6563 -26.6076 -0.007523 -5.3e-05 -7e-06 2.64569</pose>
+          <velocity>0.001361 0.005665 -0.027357 0.041971 0.020438 0.018957</velocity>
+          <acceleration>1.0702 5.62023 -41.9285 1.47741 0.466631 -3.0376</acceleration>
+          <wrench>0.10702 0.562023 -4.19285 0 -0 0</wrench>
+        </link>
+        <link name='finger0/base_rotation_link'>
+          <pose>-42.7014 -26.6264 0.061912 -0.000154 -0.000131 2.64508</pose>
+          <velocity>-0.000681 0.002484 -0.017045 0.004806 0.005412 0.0322</velocity>
+          <acceleration>-1.67122 0.876464 -24.3596 -2.13139 -1.51354 -1.02019</acceleration>
+          <wrench>-0.167122 0.087646 -2.43596 0 -0 0</wrench>
+        </link>
+        <link name='finger0/distal_link'>
+          <pose>-42.7325 -26.6841 0.062941 2.86018 -0.047915 -1.15686</pose>
+          <velocity>0.001823 0.002168 -0.001225 -0.000221 3.7e-05 0.001915</velocity>
+          <acceleration>-0.769616 -0.085266 -0.757214 -0.031488 -0.020235 0.01098</acceleration>
+          <wrench>-0.076962 -0.008527 -0.075721 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_1'>
+          <pose>-42.7308 -26.6809 0.075431 1.3363 -1.56828 -0.260423</pose>
+          <velocity>0.001105 0.001533 -0.012298 -0.001456 0.024354 0.031902</velocity>
+          <acceleration>-0.650917 -0.009083 -16.1794 -0.435852 0.228743 1.43708</acceleration>
+          <wrench>-0.065092 -0.000908 -1.61794 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_2'>
+          <pose>-42.7317 -26.6825 0.075421 -1.57021 -0.005159 2.64506</pose>
+          <velocity>0.001242 0.001673 -0.009698 -0.012634 0.004904 0.012308</velocity>
+          <acceleration>-0.736943 -0.038446 -12.5047 -1.44256 0.073454 0.648059</acceleration>
+          <wrench>-0.073694 -0.003845 -1.25047 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_3'>
+          <pose>-42.7325 -26.6841 0.075413 -3.1323 0.002463 1.81918</pose>
+          <velocity>0.001367 0.001805 -0.007451 -0.00204 -0.000846 0.011661</velocity>
+          <acceleration>-0.799535 -0.049191 -9.36503 0.188647 -0.798401 0.0011</acceleration>
+          <wrench>-0.079953 -0.004919 -0.936503 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_4'>
+          <pose>-42.7325 -26.6841 0.073627 3.13913 0.000324 0.249182</pose>
+          <velocity>0.001481 0.00192 -0.00558 -0.002337 0.000403 0.011698</velocity>
+          <acceleration>-0.822288 -0.058226 -6.75103 0.173708 -0.746292 0.001913</acceleration>
+          <wrench>-0.082229 -0.005823 -0.675103 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_5'>
+          <pose>-42.7325 -26.6841 0.071843 3.14127 -0.003221 -1.32082</pose>
+          <velocity>0.001588 0.002012 -0.004054 -0.007814 -0.001019 0.011702</velocity>
+          <acceleration>-0.819979 -0.06663 -4.63627 0.121679 -0.757569 0.002525</acceleration>
+          <wrench>-0.081998 -0.006663 -0.463627 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_6'>
+          <pose>-42.7325 -26.6841 0.070059 -3.13837 -0.00033 -2.89082</pose>
+          <velocity>0.001684 0.002073 -0.002859 -0.007807 -0.001004 0.011705</velocity>
+          <acceleration>-0.80501 -0.074083 -2.99301 0.048886 -0.485135 0.000889</acceleration>
+          <wrench>-0.080501 -0.007408 -0.299301 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_7'>
+          <pose>-42.7325 -26.6841 0.068278 -3.14126 0.000169 1.82237</pose>
+          <velocity>0.00176 0.002113 -0.001985 0.00236 0.001581 0.011707</velocity>
+          <acceleration>-0.787785 -0.080073 -1.79636 0.074583 -0.480946 6.4e-05</acceleration>
+          <wrench>-0.078779 -0.008007 -0.179636 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_8'>
+          <pose>-42.7325 -26.6841 0.066498 3.14142 -0.000579 0.252369</pose>
+          <velocity>0.001807 0.002152 -0.001423 0.002589 0.000709 0.011711</velocity>
+          <acceleration>-0.774485 -0.083983 -1.02874 0.001501 -0.20317 0.000149</acceleration>
+          <wrench>-0.077448 -0.008398 -0.102874 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_9'>
+          <pose>-42.7325 -26.6841 0.064719 3.14158 -0.001881 -0.999077</pose>
+          <velocity>0.001828 0.002172 -0.00117 -0.000194 -3.3e-05 0.001863</velocity>
+          <acceleration>-0.768717 -0.085786 -0.681971 0.070017 -0.186735 -0.005101</acceleration>
+          <wrench>-0.076872 -0.008579 -0.068197 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_1_and_2'>
+          <pose>-42.7317 -26.6825 0.075427 1.33504 -1.56828 -0.260774</pose>
+          <velocity>0.001195 0.001593 -0.010943 -0.0017 0.024474 0.012296</velocity>
+          <acceleration>-0.685733 -0.032711 -14.2744 -0.760505 0.391893 0.65599</acceleration>
+          <wrench>-0.068573 -0.003271 -1.42744 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_2_and_3'>
+          <pose>-42.7325 -26.6841 0.075418 -3.13349 -0.005159 2.64506</pose>
+          <velocity>0.001312 0.001737 -0.008518 -0.002051 -0.000833 0.012245</velocity>
+          <acceleration>-0.773591 -0.044239 -10.8672 0.197253 -0.807701 0.635155</acceleration>
+          <wrench>-0.077359 -0.004424 -1.08672 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_3_and_4'>
+          <pose>-42.7325 -26.6841 0.073631 -3.14127 0.002463 1.81918</pose>
+          <velocity>0.001424 0.001864 -0.006472 -0.002353 0.000417 0.011658</velocity>
+          <acceleration>-0.814205 -0.053614 -7.99394 0.17515 -0.747779 0.000972</acceleration>
+          <wrench>-0.081421 -0.005361 -0.799394 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_4_and_5'>
+          <pose>-42.7325 -26.6841 0.071846 3.13837 0.000324 0.249182</pose>
+          <velocity>0.001535 0.001967 -0.004774 -0.007825 -0.001005 0.011699</velocity>
+          <acceleration>-0.822783 -0.062372 -5.63298 0.124181 -0.75891 0.00194</acceleration>
+          <wrench>-0.082278 -0.006237 -0.563298 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_5_and_6'>
+          <pose>-42.7325 -26.6841 0.070062 3.14126 -0.003221 -1.32082</pose>
+          <velocity>0.001639 0.002038 -0.003416 -0.007817 -0.000993 0.011702</velocity>
+          <acceleration>-0.812711 -0.070411 -3.75739 0.050167 -0.482902 0.001615</acceleration>
+          <wrench>-0.081271 -0.007041 -0.375739 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_6_and_7'>
+          <pose>-42.7325 -26.6841 0.068279 -3.14142 -0.00033 -2.89082</pose>
+          <velocity>0.001726 0.002088 -0.002383 0.002353 0.001591 0.011702</velocity>
+          <acceleration>-0.795813 -0.077266 -2.34017 0.075534 -0.479572 0.000865</acceleration>
+          <wrench>-0.079581 -0.007727 -0.234017 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_7_and_8'>
+          <pose>-42.7325 -26.6841 0.066499 3.14101 0.000169 1.82237</pose>
+          <velocity>0.001785 0.002137 -0.001666 0.002584 0.000714 0.011707</velocity>
+          <acceleration>-0.779939 -0.082235 -1.35966 0.002112 -0.201738 1.1e-05</acceleration>
+          <wrench>-0.077994 -0.008224 -0.135966 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_8_and_9'>
+          <pose>-42.7325 -26.6841 0.064719 3.1398 -0.000579 0.252369</pose>
+          <velocity>0.00182 0.002166 -0.001258 -0.000206 -1.4e-05 0.011709</velocity>
+          <acceleration>-0.770485 -0.085165 -0.802877 0.07007 -0.186055 0.000192</acceleration>
+          <wrench>-0.077049 -0.008516 -0.080288 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_9_and_distal_link'>
+          <pose>-42.7325 -26.6841 0.062941 2.85625 -0.001881 -0.999077</pose>
+          <velocity>0.001828 0.002172 -0.001158 -0.000233 2.8e-05 0.001863</velocity>
+          <acceleration>-0.768327 -0.08573 -0.666451 -0.03545 -0.022821 -0.005514</acceleration>
+          <wrench>-0.076833 -0.008573 -0.066645 0 -0 0</wrench>
+        </link>
+        <link name='finger0/flexible_link_hidden_between_proximal_link_and_1'>
+          <pose>-42.7308 -26.6809 0.075437 1.57021 0.00013 -0.494915</pose>
+          <velocity>0.001073 0.001441 -0.013717 -0.007528 0.012211 0.031983</velocity>
+          <acceleration>-0.567583 -0.001341 -18.2174 1.9386 1.09503 -1.54496</acceleration>
+          <wrench>-0.056758 -0.000134 -1.82174 0 -0 0</wrench>
+        </link>
+        <link name='finger0/proximal_link'>
+          <pose>-42.7014 -26.6264 0.075405 1.5702 0.000131 -0.494915</pose>
+          <velocity>-0.000711 0.002281 -0.015454 -0.004196 0.010246 0.031975</velocity>
+          <acceleration>-1.55942 0.590196 -22.0471 0.647157 -0.947694 1.59255</acceleration>
+          <wrench>-0.155942 0.05902 -2.20471 0 -0 0</wrench>
+        </link>
+        <link name='finger1/base_rotation_link'>
+          <pose>-42.6473 -26.6556 0.06192 -0.000209 -2e-05 -2.07548</pose>
+          <velocity>0.001582 0.001148 -0.021552 0.034492 -0.032988 0.036252</velocity>
+          <acceleration>1.90747 -1.16502 -31.4644 2.47867 -0.304543 -0.86487</acceleration>
+          <wrench>0.190747 -0.116502 -3.14644 0 -0 0</wrench>
+        </link>
+        <link name='finger1/distal_link'>
+          <pose>-42.5899 -26.6872 0.062936 2.99235 -0.755203 -0.294866</pose>
+          <velocity>0.00153 0.003201 -0.001926 -0.000792 0.000396 0.014649</velocity>
+          <acceleration>-0.829042 -0.434432 -0.335244 0.029526 -0.016544 0.032618</acceleration>
+          <wrench>-0.082904 -0.043443 -0.033524 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_1'>
+          <pose>-42.593 -26.6855 0.075433 1.27772 -1.56896 1.36078</pose>
+          <velocity>0.002134 0.002582 -0.015229 -0.011536 -0.023362 0.035967</velocity>
+          <acceleration>1.569 -0.933576 -22.1323 0.381947 -1.48121 1.24723</acceleration>
+          <wrench>0.1569 -0.093358 -2.21322 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_2'>
+          <pose>-42.5914 -26.6864 0.075422 -1.57027 -0.003062 -2.07568</pose>
+          <velocity>0.001985 0.002725 -0.012168 -0.015781 -0.021719 0.010898</velocity>
+          <acceleration>1.03953 -0.857586 -17.1706 0.378079 -0.241375 -2.41308</acceleration>
+          <wrench>0.103953 -0.085759 -1.71706 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_3'>
+          <pose>-42.5899 -26.6872 0.075413 -3.13835 -0.001449 -2.69304</pose>
+          <velocity>0.001852 0.002836 -0.009487 -0.006928 -0.005724 0.007213</velocity>
+          <acceleration>0.560418 -0.78624 -12.7959 0.470949 -0.570729 0.000168</acceleration>
+          <wrench>0.056042 -0.078624 -1.27958 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_4'>
+          <pose>-42.5899 -26.6872 0.073625 -3.14014 -0.000438 2.61019</pose>
+          <velocity>0.001751 0.002917 -0.007244 0.001605 -0.0016 0.014074</velocity>
+          <acceleration>0.150246 -0.704566 -9.12046 0.400737 -0.525413 -0.000422</acceleration>
+          <wrench>0.015025 -0.070457 -0.912046 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_5'>
+          <pose>-42.5899 -26.6872 0.07184 -3.14116 -0.000683 1.05224</pose>
+          <velocity>0.00167 0.003007 -0.005395 1e-05 -0.000632 0.014031</velocity>
+          <acceleration>-0.189626 -0.622217 -6.07597 0.438755 -0.462035 -0.000459</acceleration>
+          <wrench>-0.018963 -0.062222 -0.607597 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_6'>
+          <pose>-42.5899 -26.6872 0.070056 -3.14091 -3.1e-05 -0.517756</pose>
+          <velocity>0.00161 0.003083 -0.003936 0.000455 0.000133 0.014032</velocity>
+          <acceleration>-0.458682 -0.547729 -3.66545 0.372233 -0.546113 0.000203</acceleration>
+          <wrench>-0.045868 -0.054773 -0.366545 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_7'>
+          <pose>-42.5899 -26.6872 0.068273 -3.14156 -0.000933 -2.08702</pose>
+          <velocity>0.001566 0.003142 -0.002862 0.001948 -0.0007 0.014035</velocity>
+          <acceleration>-0.656756 -0.488217 -1.88756 0.186467 -0.387547 0.000284</acceleration>
+          <wrench>-0.065676 -0.048822 -0.188756 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_8'>
+          <pose>-42.5899 -26.6872 0.066493 -3.14066 -0.000691 2.62616</pose>
+          <velocity>0.00154 0.003184 -0.00217 0.002195 -0.000273 0.014035</velocity>
+          <acceleration>-0.7845 -0.448578 -0.740268 0.231896 -0.292586 -6.4e-05</acceleration>
+          <wrench>-0.07845 -0.044858 -0.074027 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_9'>
+          <pose>-42.5899 -26.6872 0.064714 -3.1409 0.000113 1.0601</pose>
+          <velocity>0.001529 0.003205 -0.001858 0.000189 0.00087 0.014001</velocity>
+          <acceleration>-0.841903 -0.430586 -0.222748 0.010265 -0.148313 -0.01653</acceleration>
+          <wrench>-0.08419 -0.043059 -0.022275 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_1_and_2'>
+          <pose>-42.5914 -26.6864 0.075428 1.2765 -1.56896 1.36021</pose>
+          <velocity>0.00207 0.00268 -0.013629 -0.011676 -0.023642 0.010901</velocity>
+          <acceleration>1.30385 -0.885563 -19.5404 0.177679 -1.09481 -2.39482</acceleration>
+          <wrench>0.130385 -0.088556 -1.95404 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_2_and_3'>
+          <pose>-42.5899 -26.6872 0.075418 -3.13978 -0.003062 -2.07568</pose>
+          <velocity>0.001919 0.002788 -0.010755 -0.00694 -0.005727 0.010841</velocity>
+          <acceleration>0.791883 -0.823303 -14.8667 0.461551 -0.627805 0.582725</acceleration>
+          <wrench>0.079188 -0.08233 -1.48666 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_3_and_4'>
+          <pose>-42.5899 -26.6872 0.07363 -3.14115 -0.001448 -2.69304</pose>
+          <velocity>0.001803 0.002871 -0.008316 0.001588 -0.001621 0.007199</velocity>
+          <acceleration>0.347123 -0.745682 -10.8798 0.393742 -0.577044 0.000264</acceleration>
+          <wrench>0.034712 -0.074568 -1.08798 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_4_and_5'>
+          <pose>-42.5899 -26.6872 0.071843 3.14092 -0.000438 2.61019</pose>
+          <velocity>0.001709 0.002965 -0.00627 -2e-06 -0.000644 0.014074</velocity>
+          <acceleration>-0.028077 -0.662552 -7.519 0.425682 -0.506771 -0.000431</acceleration>
+          <wrench>-0.002808 -0.066255 -0.7519 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_5_and_6'>
+          <pose>-42.5899 -26.6872 0.070058 3.14156 -0.000683 1.05224</pose>
+          <velocity>0.001638 0.003047 -0.004617 0.000446 0.000126 0.014031</velocity>
+          <acceleration>-0.332609 -0.583114 -4.7915 0.365432 -0.57871 -0.00055</acceleration>
+          <wrench>-0.033261 -0.058311 -0.47915 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_6_and_7'>
+          <pose>-42.5899 -26.6872 0.068275 3.14066 -3.1e-05 -0.517756</pose>
+          <velocity>0.001586 0.003115 -0.003351 0.00194 -0.000706 0.014032</velocity>
+          <acceleration>-0.566074 -0.515433 -2.69757 0.177071 -0.414735 0.000184</acceleration>
+          <wrench>-0.056607 -0.051543 -0.269757 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_7_and_8'>
+          <pose>-42.5899 -26.6872 0.066495 3.1409 -0.000933 -2.08702</pose>
+          <velocity>0.001552 0.003167 -0.002469 0.00219 -0.000276 0.014035</velocity>
+          <acceleration>-0.729098 -0.465596 -1.23518 0.229251 -0.306968 0.000199</acceleration>
+          <wrench>-0.07291 -0.04656 -0.123518 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_8_and_9'>
+          <pose>-42.5899 -26.6872 0.064714 -3.14148 -0.000691 2.62616</pose>
+          <velocity>0.001533 0.003199 -0.001967 0.000186 0.000867 0.014037</velocity>
+          <acceleration>-0.821759 -0.436619 -0.402783 0.006156 -0.158066 0.000117</acceleration>
+          <wrench>-0.082176 -0.043662 -0.040278 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_9_and_distal_link'>
+          <pose>-42.5899 -26.6872 0.062936 2.37465 0.000113 1.0601</pose>
+          <velocity>0.001526 0.003206 -0.001845 -0.000248 9.1e-05 0.014001</velocity>
+          <acceleration>-0.844154 -0.429931 -0.200226 0.07091 -0.039728 -0.016293</acceleration>
+          <wrench>-0.084415 -0.042993 -0.020023 0 -0 0</wrench>
+        </link>
+        <link name='finger1/flexible_link_hidden_between_proximal_link_and_1'>
+          <pose>-42.593 -26.6855 0.07544 1.57026 1.9e-05 1.0677</pose>
+          <velocity>0.002239 0.002544 -0.016872 0.028043 -0.044527 0.036056</velocity>
+          <acceleration>1.86275 -0.947996 -24.7794 -0.324806 -0.717674 1.52167</acceleration>
+          <wrench>0.186275 -0.0948 -2.47794 0 -0 0</wrench>
+        </link>
+        <link name='finger1/proximal_link'>
+          <pose>-42.6473 -26.6556 0.075413 1.57026 1.9e-05 1.0677</pose>
+          <velocity>0.001287 0.00057 -0.019729 0.028865 -0.043243 0.036048</velocity>
+          <acceleration>1.66725 -1.83773 -28.5576 -3.06935 0.400276 1.5084</acceleration>
+          <wrench>0.166725 -0.183773 -2.85576 0 -0 0</wrench>
+        </link>
+        <link name='finger2/distal_link'>
+          <pose>-42.6063 -26.5189 0.062744 1.94009 -0.260703 -2.58742</pose>
+          <velocity>-0.00065 0.002859 0.001596 0.000934 -0.004261 0.010745</velocity>
+          <acceleration>-1.27284 -1.25262 5.75284 0.049319 -0.064829 -0.218897</acceleration>
+          <wrench>-0.127284 -0.125261 0.575284 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_1'>
+          <pose>-42.6087 -26.5196 0.075258 0.882996 -1.56971 -2.9497</pose>
+          <velocity>0.000556 0.003162 -0.01719 0.043952 -0.061001 0.021015</velocity>
+          <acceleration>2.3974 2.34415 -28.4178 1.9241 0.224886 -2.71097</acceleration>
+          <wrench>0.23974 0.234415 -2.84178 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_2'>
+          <pose>-42.6079 -26.5181 0.075247 -1.56995 -0.003998 -2.05497</pose>
+          <velocity>0.000345 0.003136 -0.01388 -0.009474 -0.033296 0.020748</velocity>
+          <acceleration>1.92505 1.84219 -22.6254 -0.602269 -0.763257 -3.06437</acceleration>
+          <wrench>0.192505 0.184219 -2.26254 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_3'>
+          <pose>-42.6063 -26.5189 0.075237 -3.134 -0.000985 -2.47562</pose>
+          <velocity>0.000185 0.003123 -0.010774 0.004698 -0.006476 0.011924</velocity>
+          <acceleration>1.45649 1.3229 -17.2393 0.351428 -0.277935 0.000151</acceleration>
+          <wrench>0.145649 0.13229 -1.72393 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_4'>
+          <pose>-42.6063 -26.5189 0.073449 3.14149 -0.000985 -2.47563</pose>
+          <velocity>2.3e-05 0.003083 -0.007951 0.005143 -0.006117 0.011911</velocity>
+          <acceleration>0.969451 0.815256 -12.1621 0.354918 -0.223845 -1.3e-05</acceleration>
+          <wrench>0.096945 0.081526 -1.21621 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_5'>
+          <pose>-42.6063 -26.5189 0.071661 3.14149 -0.000985 -2.47563</pose>
+          <velocity>-0.000133 0.003041 -0.00542 0.005009 -0.006234 0.011907</velocity>
+          <acceleration>0.479991 0.330704 -7.53774 0.363824 -0.241041 1.6e-05</acceleration>
+          <wrench>0.047999 0.03307 -0.753774 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_6'>
+          <pose>-42.6063 -26.5189 0.069874 3.14149 -0.000985 -2.47565</pose>
+          <velocity>-0.00028 0.002995 -0.003233 0.005063 -0.00622 0.011937</velocity>
+          <acceleration>0.00804 -0.116844 -3.48218 0.393549 -0.311373 -0.00043</acceleration>
+          <wrench>0.000804 -0.011684 -0.348218 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_7'>
+          <pose>-42.6063 -26.5189 0.068089 3.14146 -0.000985 -2.47565</pose>
+          <velocity>-0.000411 0.00295 -0.001428 0.005168 -0.006182 0.011933</velocity>
+          <acceleration>-0.424419 -0.512485 -0.083443 0.45013 -0.414109 2e-06</acceleration>
+          <wrench>-0.042442 -0.051248 -0.008344 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_8'>
+          <pose>-42.6063 -26.5189 0.066307 3.14146 -0.000985 -2.47565</pose>
+          <velocity>-0.00052 0.002909 -2.3e-05 0.004991 -0.006373 0.011931</velocity>
+          <acceleration>-0.795113 -0.841664 2.60182 0.509451 -0.542095 -0.000267</acceleration>
+          <wrench>-0.079511 -0.084166 0.260182 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_9'>
+          <pose>-42.6063 -26.5189 0.064525 3.14133 -0.000989 -2.48835</pose>
+          <velocity>-0.000601 0.002878 0.000982 0.005009 -0.006408 0.012309</velocity>
+          <acceleration>-1.08353 -1.09165 4.54753 0.571611 -0.660413 0.108021</acceleration>
+          <wrench>-0.108353 -0.109165 0.454753 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_1_and_2'>
+          <pose>-42.6079 -26.5181 0.075253 -0.675664 -1.56971 -2.95009</pose>
+          <velocity>0.000434 0.003158 -0.015461 0.044018 -0.061222 0.020793</velocity>
+          <acceleration>2.14822 2.10296 -25.3956 2.53252 0.584648 0.156526</acceleration>
+          <wrench>0.214822 0.210296 -2.53956 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_2_and_3'>
+          <pose>-42.6063 -26.5189 0.075242 -3.13507 -0.003998 -2.05497</pose>
+          <velocity>0.000273 0.003146 -0.012273 0.004666 -0.006416 0.020614</velocity>
+          <acceleration>1.69402 1.5818 -19.9055 0.354735 -0.275156 0.041045</acceleration>
+          <wrench>0.169402 0.15818 -1.99055 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_3_and_4'>
+          <pose>-42.6063 -26.5189 0.073454 3.14149 -0.000985 -2.47562</pose>
+          <velocity>0.000109 0.003108 -0.00933 0.005139 -0.006109 0.011923</velocity>
+          <acceleration>1.21458 1.06726 -14.6523 0.335231 -0.202946 -0.000394</acceleration>
+          <wrench>0.121458 0.106727 -1.46523 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_4_and_5'>
+          <pose>-42.6063 -26.5189 0.071666 3.14149 -0.000985 -2.47563</pose>
+          <velocity>-5.1e-05 0.003067 -0.006645 0.005 -0.00622 0.011912</velocity>
+          <acceleration>0.723998 0.569539 -9.78548 0.327641 -0.198048 -1.1e-05</acceleration>
+          <wrench>0.0724 0.056954 -0.978548 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_5_and_6'>
+          <pose>-42.6063 -26.5189 0.069878 3.14149 -0.000985 -2.47563</pose>
+          <velocity>-0.000203 0.003022 -0.004281 0.005051 -0.006202 0.011907</velocity>
+          <acceleration>0.240672 0.101677 -5.43265 0.343748 -0.250209 3.4e-05</acceleration>
+          <wrench>0.024067 0.010168 -0.543265 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_6_and_7'>
+          <pose>-42.6063 -26.5189 0.068093 3.14146 -0.000985 -2.47565</pose>
+          <velocity>-0.000342 0.002977 -0.002281 0.005153 -0.006161 0.011937</velocity>
+          <acceleration>-0.214266 -0.321753 -1.69642 0.392177 -0.341752 -0.000404</acceleration>
+          <wrench>-0.021427 -0.032175 -0.169642 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_7_and_8'>
+          <pose>-42.6063 -26.5189 0.066309 3.14146 -0.000985 -2.47565</pose>
+          <velocity>-0.000463 0.002933 -0.000675 0.004975 -0.006351 0.011933</velocity>
+          <acceleration>-0.618457 -0.685837 1.35068 0.451109 -0.468584 2.3e-05</acceleration>
+          <wrench>-0.061846 -0.068584 0.135068 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_8_and_9'>
+          <pose>-42.6063 -26.5189 0.064527 3.14132 -0.000985 -2.47565</pose>
+          <velocity>-0.000559 0.002897 0.000529 0.004995 -0.00639 0.011931</velocity>
+          <acceleration>-0.950253 -0.976785 3.66767 0.52219 -0.598247 -0.000243</acceleration>
+          <wrench>-0.095025 -0.097678 0.366767 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_9_and_distal_link'>
+          <pose>-42.6063 -26.5189 0.062745 1.92704 -0.000989 -2.48835</pose>
+          <velocity>-0.000624 0.002871 0.001337 0.003485 -0.007592 0.012312</velocity>
+          <acceleration>-1.19082 -1.18321 5.24203 0.557911 -0.728793 0.110478</acceleration>
+          <wrench>-0.119082 -0.118321 0.524203 0 -0 0</wrench>
+        </link>
+        <link name='finger2/flexible_link_hidden_between_proximal_link_and_1'>
+          <pose>-42.6087 -26.5196 0.075264 1.5701 -1.2e-05 2.64569</pose>
+          <velocity>0.000645 0.003184 -0.018812 0.076963 -0.000397 0.021085</velocity>
+          <acceleration>2.60108 2.60259 -31.2168 1.65393 0.696918 -2.72626</acceleration>
+          <wrench>0.260108 0.260259 -3.12168 0 -0 0</wrench>
+        </link>
+        <link name='finger2/proximal_link'>
+          <pose>-42.6382 -26.5742 0.075227 1.57003 -1.2e-05 2.64569</pose>
+          <velocity>0.001882 0.002587 -0.024373 0.060818 0.008565 0.020345</velocity>
+          <acceleration>4.06034 2.19302 -38.3077 0.333127 1.45555 -0.360113</acceleration>
+          <wrench>0.406035 0.219302 -3.83077 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office'>
+        <pose>-0.855998 25.1604 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-0.855998 25.1604 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office_0'>
+        <pose>-42.2658 -16.2186 0 0 -0 1.56348</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-42.2658 -16.2186 0 0 -0 1.56348</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office_0_clone'>
+        <pose>-42.2726 -30.8976 0 0 -0 1.56348</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-42.2726 -30.8976 0 0 -0 1.56348</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office_1'>
+        <pose>24.7686 -37.798 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>24.7686 -37.798 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office_1_clone'>
+        <pose>40.3551 -38.4504 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>40.3551 -38.4504 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='law_office_clone'>
+        <pose>15 25 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>15 25 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='office_chair'>
+        <pose>-25.3947 1.32056 0.022376 1.57876 -0 -0.040719</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-25.3947 1.32056 0.022376 1.57876 -0 -0.040719</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='office_chair_clone'>
+        <pose>23.1254 12.8346 0.022376 1.57742 0.004426 -0.629948</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>23.1254 12.8346 0.022376 1.57742 0.004426 -0.629948</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='office_chair_clone_0'>
+        <pose>-5.27098 -5.80252 0.022376 1.57746 0.004361 -0.620264</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-5.27098 -5.80252 0.022376 1.57746 0.004361 -0.620264</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='office_chair_clone_clone'>
+        <pose>-9.84667 -35.4829 0.022879 1.56397 -0.004102 2.55986</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-9.84667 -35.4829 0.022879 1.56397 -0.004102 2.55986</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='spheroid'>
+        <pose>-1.70895 3.38986 3.18369 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-1.70895 3.38986 3.18369 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='suv_0'>
+        <pose>-15.3193 23.5287 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-15.3193 23.5287 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='suv_1'>
+        <pose>-30.6479 10.9356 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-30.6479 10.9356 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-5.93555 -1.16586 93.343 -0 1.5578 1.46266</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='ambulance'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.0254 0.0254 0.0254</scale>
+              <uri>model://ambulance/meshes/ambulance.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.0254 0.0254 0.0254</scale>
+              <uri>model://ambulance/meshes/ambulance.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>24.5955 -13.6105 0 0 -0 0</pose>
+    </model>
+    <model name='ambulance_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.0254 0.0254 0.0254</scale>
+              <uri>model://ambulance/meshes/ambulance.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.0254 0.0254 0.0254</scale>
+              <uri>model://ambulance/meshes/ambulance.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>18.9397 -13.516 0 0 -0 0</pose>
+    </model>
+    <model name='suv_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.06 0.06 0.06</scale>
+              <uri>model://suv/meshes/suv.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.06 0.06 0.06</scale>
+              <uri>model://suv/meshes/suv.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-22.6146 22.8695 0 0 -0 0</pose>
+    </model>
+    <model name='suv_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.06 0.06 0.06</scale>
+              <uri>model://suv/meshes/suv.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.06 0.06 0.06</scale>
+              <uri>model://suv/meshes/suv.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-23.5117 4.2962 0 0 -0 0</pose>
+    </model>
+    <model name='House 1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_1/materials/scripts</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_1/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-19.4604 -25.1305 0 0 -0 0</pose>
+    </model>
+    <model name='House 2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_2/materials/scripts</uri>
+              <uri>model://house_2/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_2/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-33.7284 11.7776 0 0 -0 0</pose>
+    </model>
+    <model name='Untitled'>
+      <link name='link_0'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <pose>0 0 0 1.57 -0 1.57</pose>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yb-zhang/models/test.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yb-zhang/models/test.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>-5 0 0 0 -0 0</pose>
+    </model>
+    <model name='law_office'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>5.11186 22.8834 0 0 -0 0</pose>
+    </model>
+    <model name='House 1_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_1/materials/scripts</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_1/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>23.281 14.2882 0 0 -0 0</pose>
+    </model>
+    <model name='law_office_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>15.6097 24.1564 0 0 -0 0</pose>
+    </model>
+    <model name='spheroid'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://spheroid/meshes/spheroid.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://spheroid/meshes/spheroid.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.059488 2.24514 0 0 -0 0</pose>
+    </model>
+    <model name='dragon'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://dragon/meshes/dragon.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://dragon/meshes/dragon.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-22.6785 -14.8989 0 0 -0 0</pose>
+    </model>
+    <model name='House 2_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_2/materials/scripts</uri>
+              <uri>model://house_2/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_2/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-25.3939 -42.4658 0 0 -0 0</pose>
+    </model>
+    <model name='irobot_hand'>
+      <static>0</static>
+      <link name='base_link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision1'>
+          <pose>0 0.02 0.045 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.114 0.1 0.075</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision2'>
+          <pose>0 -0.02 0.045 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0448</radius>
+              <length>0.075</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_vis'>
+          <pose>0 -0.038 -0.023 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/palm.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/base_rotation_link'>
+        <pose>0.03075 0.038 0.069477 0 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision_1'>
+          <pose>0 0 -0.0025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0145</length>
+              <radius>0.025</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_2'>
+          <pose>0 0 -0.0104 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0145</length>
+              <radius>0.0165</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_3'>
+          <pose>0 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.002</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_4'>
+          <pose>0.013 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.008</length>
+              <radius>0.009</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_5'>
+          <pose>-0.013 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.008</length>
+              <radius>0.009</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='finger0/base_rotation_link_vis'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_base.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/proximal_link'>
+        <pose>0.03075 0.038 0.082977 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision1'>
+          <pose>0 0.0028 0.033 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.018 0.019 0.055</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision2'>
+          <pose>0 0 0 0 1.5707 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.009</radius>
+              <length>0.018</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -1.57 -0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_proximal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_proximal_link_and_1'>
+        <pose>0.030651 0.1 0.083026 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_1'>
+        <pose>0.030651 0.1 0.083026 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_1_and_2'>
+        <pose>0.030648 0.101778 0.083028 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_2'>
+        <pose>0.030648 0.101778 0.083028 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_2_and_3'>
+        <pose>0.030646 0.103555 0.083029 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_3'>
+        <pose>0.030646 0.103555 0.083029 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_3_and_4'>
+        <pose>0.030643 0.105333 0.083031 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_4'>
+        <pose>0.030643 0.105333 0.083031 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_4_and_5'>
+        <pose>0.03064 0.107111 0.083032 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_5'>
+        <pose>0.03064 0.107111 0.083032 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_5_and_6'>
+        <pose>0.030637 0.108889 0.083033 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_6'>
+        <pose>0.030637 0.108889 0.083033 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_6_and_7'>
+        <pose>0.030634 0.110667 0.083035 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_7'>
+        <pose>0.030634 0.110667 0.083035 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_7_and_8'>
+        <pose>0.030631 0.112444 0.083036 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_8'>
+        <pose>0.030631 0.112444 0.083036 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_8_and_9'>
+        <pose>0.030629 0.114222 0.083038 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_9'>
+        <pose>0.030629 0.114222 0.083038 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/flexible_link_hidden_between_9_and_distal_link'>
+        <pose>0.030626 0.116 0.083039 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger0/distal_link'>
+        <pose>0.030626 0.116 0.083039 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0.0025 0.019 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.0175 0.02023 0.04043</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_distal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/base_rotation_link'>
+        <pose>-0.03075 0.038 0.069477 0 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision_1'>
+          <pose>0 0 -0.0025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0145</length>
+              <radius>0.025</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_2'>
+          <pose>0 0 -0.0104 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0145</length>
+              <radius>0.0165</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_3'>
+          <pose>0 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.002</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_4'>
+          <pose>0.013 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.008</length>
+              <radius>0.009</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_5'>
+          <pose>-0.013 0 0.0135 1.5707 0 1.5707</pose>
+          <geometry>
+            <cylinder>
+              <length>0.008</length>
+              <radius>0.009</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_base.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/proximal_link'>
+        <pose>-0.03075 0.038 0.082977 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision1'>
+          <pose>0 0.0028 0.033 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.018 0.019 0.055</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision2'>
+          <pose>0 0 0 0 1.5707 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.009</radius>
+              <length>0.018</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -1.57 -0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_proximal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_proximal_link_and_1'>
+        <pose>-0.030849 0.1 0.083026 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_1'>
+        <pose>-0.030849 0.1 0.083026 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_1_and_2'>
+        <pose>-0.030852 0.101778 0.083028 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_2'>
+        <pose>-0.030852 0.101778 0.083028 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_2_and_3'>
+        <pose>-0.030854 0.103555 0.083029 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_3'>
+        <pose>-0.030854 0.103555 0.083029 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_3_and_4'>
+        <pose>-0.030857 0.105333 0.083031 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_4'>
+        <pose>-0.030857 0.105333 0.083031 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_4_and_5'>
+        <pose>-0.03086 0.107111 0.083032 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_5'>
+        <pose>-0.03086 0.107111 0.083032 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_5_and_6'>
+        <pose>-0.030863 0.108889 0.083033 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_6'>
+        <pose>-0.030863 0.108889 0.083033 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_6_and_7'>
+        <pose>-0.030866 0.110667 0.083035 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_7'>
+        <pose>-0.030866 0.110667 0.083035 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_7_and_8'>
+        <pose>-0.030869 0.112444 0.083036 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_8'>
+        <pose>-0.030869 0.112444 0.083036 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_8_and_9'>
+        <pose>-0.030871 0.114222 0.083038 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_9'>
+        <pose>-0.030871 0.114222 0.083038 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/flexible_link_hidden_between_9_and_distal_link'>
+        <pose>-0.030874 0.116 0.083039 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger1/distal_link'>
+        <pose>-0.030874 0.116 0.083039 1.57 -0 -3.14</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0.0025 0.019 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.0175 0.02023 0.04043</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_distal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/proximal_link'>
+        <pose>0 -0.038 0.082755 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision1'>
+          <pose>0 0.0028 0.033 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.018 0.019 0.055</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision2'>
+          <pose>0 0 0 0 1.5707 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.009</radius>
+              <length>0.018</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -1.57 -0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_proximal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_proximal_link_and_1'>
+        <pose>0 -0.1 0.082804 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_1'>
+        <pose>0 -0.1 0.082804 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_1_and_2'>
+        <pose>0 -0.101778 0.082806 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_2'>
+        <pose>0 -0.101778 0.082806 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_2_and_3'>
+        <pose>0 -0.103556 0.082807 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_3'>
+        <pose>0 -0.103556 0.082807 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_3_and_4'>
+        <pose>0 -0.105333 0.082809 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_4'>
+        <pose>0 -0.105333 0.082809 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_4_and_5'>
+        <pose>0 -0.107111 0.08281 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_5'>
+        <pose>0 -0.107111 0.08281 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_5_and_6'>
+        <pose>0 -0.108889 0.082811 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_6'>
+        <pose>0 -0.108889 0.082811 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_6_and_7'>
+        <pose>0 -0.110667 0.082813 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_7'>
+        <pose>0 -0.110667 0.082813 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_7_and_8'>
+        <pose>0 -0.112444 0.082814 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_8'>
+        <pose>0 -0.112444 0.082814 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_8_and_9'>
+        <pose>0 -0.114222 0.082816 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_9'>
+        <pose>0 -0.114222 0.082816 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.014 0.00176 0.006</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/flexible_link_hidden_between_9_and_distal_link'>
+        <pose>0 -0.116 0.082817 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='finger2/distal_link'>
+        <pose>0 -0.116 0.082817 1.57 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0.0025 0.019 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.0175 0.02023 0.04043</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <mesh>
+              <uri>model://irobot_hand/meshes/finger_distal.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='finger0/joint_base_rotation' type='revolute'>
+        <child>finger0/base_rotation_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 -1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/joint_base' type='revolute'>
+        <child>finger0/proximal_link</child>
+        <parent>finger0/base_rotation_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_proximal_to_1' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_proximal_link_and_1</child>
+        <parent>finger0/proximal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_proximal_to_1' type='revolute'>
+        <child>finger0/flexible_link_1</child>
+        <parent>finger0/flexible_link_hidden_between_proximal_link_and_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_1_to_2' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_1_and_2</child>
+        <parent>finger0/flexible_link_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_1_to_2' type='revolute'>
+        <child>finger0/flexible_link_2</child>
+        <parent>finger0/flexible_link_hidden_between_1_and_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_2_to_3' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_2_and_3</child>
+        <parent>finger0/flexible_link_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_2_to_3' type='revolute'>
+        <child>finger0/flexible_link_3</child>
+        <parent>finger0/flexible_link_hidden_between_2_and_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_3_to_4' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_3_and_4</child>
+        <parent>finger0/flexible_link_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_4_to_5' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_4_and_5</child>
+        <parent>finger0/flexible_link_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_3_to_4' type='revolute'>
+        <child>finger0/flexible_link_4</child>
+        <parent>finger0/flexible_link_hidden_between_3_and_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_4_to_5' type='revolute'>
+        <child>finger0/flexible_link_5</child>
+        <parent>finger0/flexible_link_hidden_between_4_and_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_5_to_6' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_5_and_6</child>
+        <parent>finger0/flexible_link_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_5_to_6' type='revolute'>
+        <child>finger0/flexible_link_6</child>
+        <parent>finger0/flexible_link_hidden_between_5_and_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_6_to_7' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_6_and_7</child>
+        <parent>finger0/flexible_link_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_6_to_7' type='revolute'>
+        <child>finger0/flexible_link_7</child>
+        <parent>finger0/flexible_link_hidden_between_6_and_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_7_to_8' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_7_and_8</child>
+        <parent>finger0/flexible_link_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_7_to_8' type='revolute'>
+        <child>finger0/flexible_link_8</child>
+        <parent>finger0/flexible_link_hidden_between_7_and_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_8_to_9' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_8_and_9</child>
+        <parent>finger0/flexible_link_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_flex_from_9_to_distal' type='revolute'>
+        <child>finger0/flexible_link_hidden_between_9_and_distal_link</child>
+        <parent>finger0/flexible_link_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_8_to_9' type='revolute'>
+        <child>finger0/flexible_link_9</child>
+        <parent>finger0/flexible_link_hidden_between_8_and_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger0/flexible_joint_twist_from_9_to_distal' type='revolute'>
+        <child>finger0/distal_link</child>
+        <parent>finger0/flexible_link_hidden_between_9_and_distal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/joint_base_rotation' type='revolute'>
+        <child>finger1/base_rotation_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/joint_base' type='revolute'>
+        <child>finger1/proximal_link</child>
+        <parent>finger1/base_rotation_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_proximal_to_1' type='revolute'>
+        <child>finger1/flexible_link_1</child>
+        <parent>finger1/flexible_link_hidden_between_proximal_link_and_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_proximal_to_1' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_proximal_link_and_1</child>
+        <parent>finger1/proximal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_1_to_2' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_1_and_2</child>
+        <parent>finger1/flexible_link_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_1_to_2' type='revolute'>
+        <child>finger1/flexible_link_2</child>
+        <parent>finger1/flexible_link_hidden_between_1_and_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_2_to_3' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_2_and_3</child>
+        <parent>finger1/flexible_link_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_2_to_3' type='revolute'>
+        <child>finger1/flexible_link_3</child>
+        <parent>finger1/flexible_link_hidden_between_2_and_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_3_to_4' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_3_and_4</child>
+        <parent>finger1/flexible_link_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_3_to_4' type='revolute'>
+        <child>finger1/flexible_link_4</child>
+        <parent>finger1/flexible_link_hidden_between_3_and_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_4_to_5' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_4_and_5</child>
+        <parent>finger1/flexible_link_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_4_to_5' type='revolute'>
+        <child>finger1/flexible_link_5</child>
+        <parent>finger1/flexible_link_hidden_between_4_and_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_5_to_6' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_5_and_6</child>
+        <parent>finger1/flexible_link_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_5_to_6' type='revolute'>
+        <child>finger1/flexible_link_6</child>
+        <parent>finger1/flexible_link_hidden_between_5_and_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_6_to_7' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_6_and_7</child>
+        <parent>finger1/flexible_link_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_6_to_7' type='revolute'>
+        <child>finger1/flexible_link_7</child>
+        <parent>finger1/flexible_link_hidden_between_6_and_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_7_to_8' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_7_and_8</child>
+        <parent>finger1/flexible_link_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_7_to_8' type='revolute'>
+        <child>finger1/flexible_link_8</child>
+        <parent>finger1/flexible_link_hidden_between_7_and_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_8_to_9' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_8_and_9</child>
+        <parent>finger1/flexible_link_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_8_to_9' type='revolute'>
+        <child>finger1/flexible_link_9</child>
+        <parent>finger1/flexible_link_hidden_between_8_and_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_flex_from_9_to_distal' type='revolute'>
+        <child>finger1/flexible_link_hidden_between_9_and_distal_link</child>
+        <parent>finger1/flexible_link_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0.999999 0.001593 -0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger1/flexible_joint_twist_from_9_to_distal' type='revolute'>
+        <child>finger1/distal_link</child>
+        <parent>finger1/flexible_link_hidden_between_9_and_distal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-0.001593 0.999998 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/joint_base' type='revolute'>
+        <child>finger2/proximal_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_proximal_to_1' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_proximal_link_and_1</child>
+        <parent>finger2/proximal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_proximal_to_1' type='revolute'>
+        <child>finger2/flexible_link_1</child>
+        <parent>finger2/flexible_link_hidden_between_proximal_link_and_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_1_to_2' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_1_and_2</child>
+        <parent>finger2/flexible_link_1</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_1_to_2' type='revolute'>
+        <child>finger2/flexible_link_2</child>
+        <parent>finger2/flexible_link_hidden_between_1_and_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_2_to_3' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_2_and_3</child>
+        <parent>finger2/flexible_link_2</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_2_to_3' type='revolute'>
+        <child>finger2/flexible_link_3</child>
+        <parent>finger2/flexible_link_hidden_between_2_and_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_3_to_4' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_3_and_4</child>
+        <parent>finger2/flexible_link_3</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_3_to_4' type='revolute'>
+        <child>finger2/flexible_link_4</child>
+        <parent>finger2/flexible_link_hidden_between_3_and_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_4_to_5' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_4_and_5</child>
+        <parent>finger2/flexible_link_4</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_4_to_5' type='revolute'>
+        <child>finger2/flexible_link_5</child>
+        <parent>finger2/flexible_link_hidden_between_4_and_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_5_to_6' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_5_and_6</child>
+        <parent>finger2/flexible_link_5</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_5_to_6' type='revolute'>
+        <child>finger2/flexible_link_6</child>
+        <parent>finger2/flexible_link_hidden_between_5_and_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_6_to_7' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_6_and_7</child>
+        <parent>finger2/flexible_link_6</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_6_to_7' type='revolute'>
+        <child>finger2/flexible_link_7</child>
+        <parent>finger2/flexible_link_hidden_between_6_and_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_7_to_8' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_7_and_8</child>
+        <parent>finger2/flexible_link_7</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_7_to_8' type='revolute'>
+        <child>finger2/flexible_link_8</child>
+        <parent>finger2/flexible_link_hidden_between_7_and_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_8_to_9' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_8_and_9</child>
+        <parent>finger2/flexible_link_8</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_8_to_9' type='revolute'>
+        <child>finger2/flexible_link_9</child>
+        <parent>finger2/flexible_link_hidden_between_8_and_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_flex_from_9_to_distal' type='revolute'>
+        <child>finger2/flexible_link_hidden_between_9_and_distal_link</child>
+        <parent>finger2/flexible_link_9</parent>
+        <axis>
+          <xyz expressed_in='__model__'>-1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='finger2/flexible_joint_twist_from_9_to_distal' type='revolute'>
+        <child>finger2/distal_link</child>
+        <parent>finger2/flexible_link_hidden_between_9_and_distal_link</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 -1 0.000796</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <pose>-43.1603 -26.5521 0 0 -0 0</pose>
+    </model>
+    <model name='law_office_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-42.65 -19.9727 0 0 -0 0</pose>
+    </model>
+    <model name='law_office_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-45.6947 -32.743 0 0 -0 1.56348</pose>
+    </model>
+    <model name='House 2_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_2/materials/scripts</uri>
+              <uri>model://house_2/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_2/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-45.0326 2.65332 0 0 -0 0</pose>
+    </model>
+    <model name='dragon_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://dragon/meshes/dragon.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://dragon/meshes/dragon.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12.4422 -18.5768 3.95507 1.58387 0 -0.042656</pose>
+    </model>
+    <model name='law_office_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>43.5056 -6.73273 0 0 -0 0</pose>
+    </model>
+    <model name='law_office_1_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 6.96244 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.84401 5.43165 13.9249</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://law_office/meshes/law_office.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>43.7933 -27.9023 0 0 -0 0</pose>
+    </model>
+    <model name='office_chair'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.405753 -13.8169 0 0 -0 0</pose>
+    </model>
+    <model name='office_chair_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>20.3796 3.03432 0.022376 1.57876 -0 -0.040719</pose>
+    </model>
+    <model name='House 2_clone_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_2/materials/scripts</uri>
+              <uri>model://house_2/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_2/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>37.735 3.48407 0 0 -0 1.58288</pose>
+    </model>
+    <model name='office_chair_clone_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-7.83669 -30.8869 0.022376 1.57742 0.004426 -0.629948</pose>
+    </model>
+    <model name='office_chair_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://office_chair/meshes/office_chair.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-5.63907 -5.24761 0.022376 1.57876 -0 -0.040719</pose>
+    </model>
+  </world>
+</sdf>
