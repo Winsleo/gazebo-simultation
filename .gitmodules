@@ -4,3 +4,9 @@
 [submodule "livox_laser_simulation"]
 	path = livox_laser_simulation
 	url = git@github.com:Winsleo/livox_laser_simulation.git
+[submodule "scout_gazebo/worlds/gazebo_models"]
+	path = scout_gazebo/worlds/gazebo_models
+	url = https://github.com/Winsleo/gazebo_models.git
+[submodule "livox_ros_driver"]
+	path = livox_ros_driver
+	url = https://github.com/Livox-SDK/livox_ros_driver.git
