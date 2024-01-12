@@ -4,8 +4,9 @@
 
     <xacro:arg name="robot_namespace" default="/" />
     <!-- 属性封装 -->
-    <xacro:property name="M_PI" value="3.14159" />
-
+    <!-- 0 for velodyne, 1 for livox, 2 for 120*25 solid lidar -->
+    <xacro:arg name="lidar_type" default="2" />
+    <xacro:property name="lidar_type" value="$(arg lidar_type)" />
     <xacro:property name="base_x_size" value="0.9250000" />
     <xacro:property name="base_y_size" value="0.380000" />
     <xacro:property name="base_z_size" value="0.210000" />
@@ -40,25 +41,32 @@
     </xacro:realsense_d435> -->
 
     <xacro:include filename="$(find scout_gazebo)/urdf/laser_support.xacro" />
-    <!-- VLP16 激光雷达 -->
-    <!-- <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-    <xacro:VLP-16 parent="support" name="lidar" topic="/scan" organize_cloud="${organize_cloud}"
-    hz="10" samples="1800" max_range="150" gpu="${gpu}">
-          <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:VLP-16> -->
+    <!-- ${}里可以使用python语句 -->
+    <xacro:if value="${lidar_type==0}">
+        <!-- VLP16 激光雷达 -->    
+        <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+        <xacro:VLP-16 parent="support" name="lidar" topic="/scan" organize_cloud="${organize_cloud}"
+        hz="10" samples="1800" max_range="150" gpu="${gpu}">
+              <origin xyz="0 0 0" rpy="0 0 0" />
+        </xacro:VLP-16>
+    </xacro:if>
 
-    <!-- 车载120°激光雷达 -->
-    <!-- <xacro:include filename="$(find velodyne_description)/urdf/Lidar.urdf.xacro" />
-    <xacro:Lidar parent="support" name="lidar" topic="/scan" hz="10"
-        organize_cloud="${organize_cloud}" gpu="${gpu}"
-        samples="480" min_horizonal_angle="-${60.0*M_PI/180.0}" max_horizonal_angle="${60.0*M_PI/180.0}"
-        lasers="96" min_vertical_angle="-${12.5*M_PI/180.0}" max_vertical_angle="${12.5*M_PI/180.0}">
-        <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:Lidar> -->
-
-    <!-- Livox Avia激光雷达 -->
-    <xacro:include filename="$(find livox_laser_simulation)/urdf/livox_avia.xacro" />
-    <xacro:Livox_Avia name="lidar" parent="support" />
+    <xacro:if value="${lidar_type==1}">
+        <!-- Livox Avia激光雷达 -->
+        <xacro:include filename="$(find livox_laser_simulation)/urdf/livox_avia.xacro" />
+        <xacro:Livox_Avia name="lidar" parent="support" />
+    </xacro:if>
+    
+    <xacro:if value="${lidar_type==2}">
+        <!-- 车载120°激光雷达 -->
+        <xacro:include filename="$(find velodyne_description)/urdf/Lidar.urdf.xacro" />
+        <xacro:Lidar parent="support" name="lidar" topic="/scan" hz="10"
+            organize_cloud="${organize_cloud}" gpu="${gpu}"
+            samples="480" min_horizonal_angle="${radians(-60.0)}" max_horizonal_angle="${radians(60.0)}"
+            lasers="96" min_vertical_angle="${radians(-12.5)}" max_vertical_angle="${radians(12.5)}">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </xacro:Lidar>
+    </xacro:if>
 
     <!-- IMU 模块 -->
     <xacro:include filename="$(find scout_gazebo)/urdf/imu.xacro" />
@@ -113,7 +121,7 @@
     <!-- wheel labeled from 0 to 3, conter-clockwise, starting from front right wheel -->
     <!-- motor 1 and 2 (left side) are mechanically installed in a reversed direction -->
     <xacro:scout_wheel_type1 wheel_prefix="front_right">
-        <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="3.14 0 0" />
+        <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="${radians(180)} 0 0" />
     </xacro:scout_wheel_type1>
     <xacro:scout_wheel_type2 wheel_prefix="front_left">
         <origin xyz="${wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
@@ -122,6 +130,6 @@
         <origin xyz="${-wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:scout_wheel_type1>
     <xacro:scout_wheel_type2 wheel_prefix="rear_right">
-        <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="3.14 0 0" />
+        <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="${radians(180)} 0 0" />
     </xacro:scout_wheel_type2>
 </robot>
