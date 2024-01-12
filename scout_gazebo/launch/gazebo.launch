@@ -4,11 +4,11 @@
 	<arg name="gui" default="true" />
 	<arg name="paused" default="false" />
 	<arg name="use_sim_time" value="true" />
-	<arg name="world" default="$(find livox_laser_simulation)/worlds/standardrobots_factory.world" />
+	<arg name="world" default="$(find livox_laser_simulation)/worlds/warehouse.world" />
 	<!-- 机器人模型xacro文件 -->
 	<arg name="model_xacro" default="$(find scout_gazebo)/urdf/base.xacro" />
 	<!-- 将 Urdf 文件的内容加载到参数服务器 -->
-	<param name="robot_description" command="$(find xacro)/xacro $(arg model_xacro)" />
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model_xacro)" />
 	<!-- Launch  the joint state publisher -->
 	<node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
 	<!-- Launch  the robot state publisher -->
@@ -30,5 +30,5 @@
 		<arg name="use_sim_time" value="$(arg use_sim_time)" />
 	</include>
 	<!-- 在 gazebo 中显示机器人模型  -->
-	<node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model scout -param robot_description" />
+	<node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model scout -param robot_description -Y 3.14" />
 </launch>

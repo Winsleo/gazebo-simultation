@@ -26,22 +26,6 @@
         <color rgba="0.0 0.0 0.0 1.0" />
     </material>
 
-    <!--插件-->
-    <!--xacro:include
-    filename ="$(find scout_gazebo)/urdf/plugin.xacro" -->
-    <gazebo>
-        <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
-            <alwaysOn>true</alwaysOn>
-            <updateRate>50.0</updateRate>
-            <bodyName>base_link</bodyName>
-            <topicName>base_pose_ground_truth</topicName>
-            <gaussianNoise>0.0</gaussianNoise>
-            <frameName>map</frameName>
-            <xyzOffsets>0 0 0</xyzOffsets>
-            <rpyOffsets>0 0 0</rpyOffsets>
-        </plugin>
-    </gazebo>
-
     <!-- 底盘的轮子 -->
     <xacro:include filename="$(find scout_gazebo)/urdf/scout_wheel_type1.xacro" />
     <xacro:include filename="$(find scout_gazebo)/urdf/scout_wheel_type2.xacro" />
@@ -55,21 +39,34 @@
         <origin rpy="0 0 0" xyz="0 0 0.3" />
     </xacro:realsense_d435> -->
 
-    <!-- VLP16 激光雷达 -->
     <xacro:include filename="$(find scout_gazebo)/urdf/laser_support.xacro" />
+    <!-- VLP16 激光雷达 -->
     <!-- <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-    <xacro:VLP-16 parent="support" name="velodyne" topic="/scan" organize_cloud="${organize_cloud}"
+    <xacro:VLP-16 parent="support" name="lidar" topic="/scan" organize_cloud="${organize_cloud}"
     hz="10" samples="1800" max_range="150" gpu="${gpu}">
-          <origin xyz="0 0 ${support_length/2}" rpy="0 0 0" />
+          <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:VLP-16> -->
+
+    <!-- 车载120°激光雷达 -->
+    <!-- <xacro:include filename="$(find velodyne_description)/urdf/Lidar.urdf.xacro" />
+    <xacro:Lidar parent="support" name="lidar" topic="/scan" hz="10"
+        organize_cloud="${organize_cloud}" gpu="${gpu}"
+        samples="480" min_horizonal_angle="-${60.0*M_PI/180.0}" max_horizonal_angle="${60.0*M_PI/180.0}"
+        lasers="96" min_vertical_angle="-${12.5*M_PI/180.0}" max_vertical_angle="${12.5*M_PI/180.0}">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:Lidar> -->
+
+    <!-- Livox Avia激光雷达 -->
     <xacro:include filename="$(find livox_laser_simulation)/urdf/livox_avia.xacro" />
-    <xacro:Livox_AVIA name="livox" parent="support" />
+    <xacro:Livox_Avia name="lidar" parent="support" />
+
     <!-- IMU 模块 -->
     <xacro:include filename="$(find scout_gazebo)/urdf/imu.xacro" />
-    <xacro:imu sensor_name="imu" parent_link="base_link">
+    <xacro:imu sensor_name="imu" parent_link="lidar">
         <origin rpy="0 0 0" xyz="0 0 0" />
     </xacro:imu>
-
+    <!--真值插件-->
+    <xacro:include filename ="$(find scout_gazebo)/urdf/ground_truth.xacro" />
     <!-- 机器人导航控制模块 -->
     <xacro:include filename="$(find scout_gazebo)/urdf/move.xacro" />
 

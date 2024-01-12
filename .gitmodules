@@ -1,3 +1,6 @@
 [submodule "velodyne_simulator"]
 	path = velodyne_simulator
 	url = git@github.com:Winsleo/velodyne_simulator.git
+[submodule "livox_laser_simulation"]
+	path = livox_laser_simulation
+	url = git@github.com:Winsleo/livox_laser_simulation.git

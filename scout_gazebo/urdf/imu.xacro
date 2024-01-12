@@ -13,10 +13,10 @@
             <!-- <origin xyz="${imu_offset_x} ${imu_offset_y} ${imu_offset_z}" rpy="0 0 0" /> -->
             <xacro:insert_block name="origin" />
             <parent link="${parent_link}"/>
-            <child link="imu_base"/>
+            <child link="imu"/>
         </joint>
             
-        <link name="imu_base">
+        <link name="imu">
             <visual>
                 <origin rpy="0 0 0" xyz="0 0 0" />
                 <geometry>
@@ -36,7 +36,7 @@
         </link>
 
         <!-- 被引用的link -->
-        <gazebo reference="imu_base">
+        <gazebo reference="imu">
             <material>Gazebo/Bule</material>
             <gravity>true</gravity>
             <sensor name="imu_sensor" type="imu">
@@ -46,12 +46,12 @@
             <topic>__default_topic__</topic>
             <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
                 <topicName>imu/data</topicName>
-                <bodyName>imu_base</bodyName>
+                <bodyName>imu</bodyName>
                 <updateRateHZ>200.0</updateRateHZ>
                 <gaussianNoise>0.01</gaussianNoise>
                 <xyzOffset>0 0 0</xyzOffset>     
                 <rpyOffset>0 0 0</rpyOffset>
-                <frameName>imu_base</frameName>        
+                <frameName>imu</frameName>        
             </plugin>
             <pose>0 0 0 0 0 0</pose>
         </sensor>
