@@ -1,5 +1,6 @@
 <launch>
 	<!-- Default arguments for gazebo -->
+    <arg name="rosbag" default="true" />
     <arg name="rviz" default="true" />
 
 	<arg name="debug" default="false" />
@@ -35,4 +36,7 @@
 	</include>
 	<!-- 在 gazebo 中显示机器人模型  -->
 	<node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model scout -param robot_description" />
+    <group if="$(arg rosbag)">
+        <node pkg="rosbag" type="record" name="data_record" args="-o $(find scout_gazebo)/bag/ /scan /imu/data /lidar_pose_ground_truth /imu_pose_ground_truth" />
+    </group>
 </launch>

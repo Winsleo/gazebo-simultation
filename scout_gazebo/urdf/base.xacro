@@ -5,7 +5,7 @@
     <xacro:arg name="robot_namespace" default="/" />
     <!-- 属性封装 -->
     <!-- 0 for velodyne, 1 for livox, 2 for 120*25 solid lidar -->
-    <xacro:arg name="lidar_type" default="0" />
+    <xacro:arg name="lidar_type" default="1" />
     <xacro:property name="lidar_type" value="$(arg lidar_type)" />
     <xacro:property name="base_x_size" value="0.9250000" />
     <xacro:property name="base_y_size" value="0.380000" />
@@ -44,11 +44,6 @@
     <!-- ${}里可以使用python语句 -->
     <xacro:if value="${lidar_type==0}">
         <!-- VLP16 激光雷达 -->    
-        <!-- <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-        <xacro:VLP-16 parent="support" name="lidar" topic="/scan" organize_cloud="${organize_cloud}"
-        hz="10" samples="1800" max_range="150" gpu="${gpu}">
-              <origin xyz="0 0 0" rpy="0 0 0" />
-        </xacro:VLP-16> -->
         <xacro:include filename="$(find velodyne_description)/urdf/Lidar.urdf.xacro" />
         <xacro:Lidar parent="support" name="lidar" topic="/scan" hz="10"
             organize_cloud="${organize_cloud}" gpu="${gpu}"

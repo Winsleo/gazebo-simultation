@@ -1,9 +1,9 @@
 [submodule "velodyne_simulator"]
 	path = velodyne_simulator
-	url = git@github.com:Winsleo/velodyne_simulator.git
+	url = https://github.com/Winsleo/velodyne_simulator.git
 [submodule "livox_laser_simulation"]
 	path = livox_laser_simulation
-	url = git@github.com:Winsleo/livox_laser_simulation.git
+	url = https://github.com/Winsleo/livox_laser_simulation.git
 [submodule "scout_gazebo/worlds/gazebo_models"]
 	path = scout_gazebo/worlds/gazebo_models
 	url = https://github.com/Winsleo/gazebo_models.git
